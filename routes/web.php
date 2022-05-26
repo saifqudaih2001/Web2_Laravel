@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('login', 'App\Http\Controllers\Controller@login' );
+
+Route::redirect('google', 'https://www.google.com/');
+
+Route::view('welcome', 'admin.welcomeAdmin' ,['name'=>'Saif'] );
