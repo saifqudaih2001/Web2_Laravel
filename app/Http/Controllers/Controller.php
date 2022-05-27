@@ -12,6 +12,11 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     
     public function login(){
-        return 'Login Controller Route';
+        $data = [
+            'name' => 'ali',
+            'age' => 21 ,
+            'students' => true
+        ];
+        return view('admin.welcomeAdmin', ['data' => $data]);
     }
 }
